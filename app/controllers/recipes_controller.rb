@@ -5,11 +5,11 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
-    @recipe
   end
 
   def new
     @recipe = Recipe.new
+    @recipe.ingredients.build
   end
 
   def create
